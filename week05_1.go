@@ -3,17 +3,21 @@ package main
 import (
 	"bufio"
 	"fmt"
-	"os"
 	"log"
+	"os"
 )
 
 func main() {
 	fmt.Print("정수 입력 : ")
 	reader := bufio.NewReader(os.Stdin)
-	inputScore, err := reader.ReadString('\n') //option2
-	if err !=nil{  //conditionals
+	inputScore, err := reader.ReadString('\n')
+	if err != nil {
 		log.Fatal(err)
 	}
-	log.Fatal(err)
+	if inputScore >= 90 {
+		grade := "A grade"
+	} else {
+		grade := "under grade"
+	}
 	fmt.Println(inputScore)
 }

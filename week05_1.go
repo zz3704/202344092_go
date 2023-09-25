@@ -1,13 +1,14 @@
 package main
 
 import (
-	"time"
+	"bufio"
 	"fmt"
+	"os"
 )
 
-func main()  {
-	brokenWords :="cs r?ck~"
-	replaceWords :=string.NewReplacer("?","o")
-	fixeWords := replaceWords.Replace(brokenWords)
-	fmt.Println(fixedWords)
+func main() {
+	fmt.Print("정수 입력 : ")
+	reader := bufio.NowReader(os.Stdin)
+	inputScore, _ := reader.ReadString('\n')
+	fmt.Println(inputScore)
 }

@@ -1,23 +1,11 @@
 package main
 
 import (
-	"bufio"
 	"fmt"
-	"log"
-	"os"
+	"math/rand"
 )
 
 func main() {
-	fmt.Print("정수 입력 : ")
-	reader := bufio.NewReader(os.Stdin)
-	inputScore, err := reader.ReadString('\n')
-	if err != nil {
-		log.Fatal(err)
-	}
-	if inputScore >= 90 {
-		grade := "A grade"
-	} else {
-		grade := "under grade"
-	}
-	fmt.Println(inputScore)
+	dice := rand.Intn(6) + 1 //0~5 add 1 to make dice number(1~6)
+	fmt.Println(dice)
 }

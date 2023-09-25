@@ -6,9 +6,8 @@ import (
 )
 
 func main()  {
-	var now time.Time=time.now()
-	var year int = now.year()
-	month := now.Month()
-	fmt.println(now.Month)
-	fmt.println(year)
+	brokenWords :="cs r?ck~"
+	replaceWords :=string.NewReplacer("?","o")
+	fixeWords := replaceWords.Replace(brokenWords)
+	fmt.Println(fixedWords)
 }
